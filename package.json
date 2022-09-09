@@ -15,7 +15,6 @@
     "daisyui": "^2.24.2"
   },
   "devDependencies": {
-    "@astrojs/netlify": "^1.0.2",
     "@astrojs/partytown": "^1.0.0",
     "@astrojs/prefetch": "^0.0.7",
     "@astrojs/sitemap": "^1.0.0",
