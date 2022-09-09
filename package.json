@@ -1,0 +1,25 @@
+{
+  "name": "@example/basics",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^1.1.5",
+    "daisyui": "^2.24.2"
+  },
+  "devDependencies": {
+    "@astrojs/partytown": "^1.0.0",
+    "@astrojs/prefetch": "^0.0.7",
+    "@astrojs/sitemap": "^1.0.0",
+    "@astrojs/svelte": "^1.0.0",
+    "@astrojs/tailwind": "^1.0.0",
+    "@tailwindcss/typography": "^0.5.7",
+    "svelte": "^3.50.0"
+  }
+}

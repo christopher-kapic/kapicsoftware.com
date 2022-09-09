@@ -1,0 +1,26 @@
+backend:
+  # name: git-gateway
+  name: test-repo
+  branch: master # Branch to update (optional; defaults to master)
+media_folder: public/cms
+public_folder: /cms
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "src/pages/blog"
+    create: true
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "../../layouts/Layout.astro"}
+      - { label: "Title", name: "title", widget: "string" }
+      - label: "Author"
+        name: "author"
+        widget: "string"
+      - { label: "Summary", name: "summary", widget: "string" }
+      - { label: "Main Image", name: "image", widget: "image", allow_multiple: false }
+      - label: "Tags"
+        name: "tags"
+        widget: list
+      - { label: "Publish Date", name: "publishDate", widget: "datetime"}
+      - { label: "Update Date", name: "updateDate", widget: "datetime"}
+      - { label: "Content", name: "body", widget: "markdown"}

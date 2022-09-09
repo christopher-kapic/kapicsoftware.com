@@ -1,0 +1,10 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Posts from "@components/blog/Posts.svelte"
+import type { Frontmatter } from "@components/blog/Posts.svelte"
+const posts = await Astro.glob<Frontmatter>('../blog/*.md');
+---
+
+<Layout title="Kapic Software Blog">
+  <Posts client:visible posts={posts}/>
+</Layout>
