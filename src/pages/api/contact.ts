@@ -9,5 +9,11 @@ export async function post({request}: {request: Request}) {
   //   email: "christopher@example.com",
   //   message: "Hi, I'd like to buy your product!"
   // }
-  return Response.redirect(`${url}contact`, 307)
+  await fetch(import.meta.env.SLACK_NOTIFICATION_URL, {
+    method: "POST",
+    body: JSON.stringify({
+      text: `${body.email} just requested a consultation for a website.\n${body.message}`
+    })
+  })
+  return Response.redirect(`${url}success`, 307)
 }

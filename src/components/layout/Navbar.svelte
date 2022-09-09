@@ -13,11 +13,11 @@
 </script>
 
 <section class="bg-white">
-  <nav class="flex justify-between p-6 px-4">
+  <nav class="flex justify-between p-6 px-4 desktop-navbar">
     <a href={logoHref} class="flex items-center" rel="prefetch">
       <img class="h-8 mr-2" src={logo} alt={`${title} logo`} />
       <span
-        class="text-neutral font-extrabold text-2xl hover:text-neutral-focus transition hover:underline decoration-primary"
+        class="text-gray-200 font-extrabold text-2xl hover:text-gray-300 transition hover:underline decoration-primary"
         >{title}</span
       >
     </a>
@@ -26,7 +26,7 @@
         {#each pages as page}
           <li class="mr-12">
             <a
-              class="text-neutral hover:text-neutral-focus transition decoration-primary hover:underline font-medium"
+              class="text-gray-200 hover:text-gray-300 transition decoration-primary hover:underline font-medium"
               href={page.href}
               rel="prefetch"
               >{page.title}</a
@@ -54,11 +54,12 @@
         xmlns="http://www.w3.org/2000/svg"
       >
         <rect
-          class="text-gray-50"
+          class="text-gray-50 bg-opacity-10"
           width="32"
           height="32"
           rx="6"
           fill="currentColor"
+          fill-opacity=".1"
         />
         <path
           class="text-gray-500"
@@ -126,3 +127,10 @@
     </div>
   </div>
 </section>
+
+<style>
+.desktop-navbar {
+  background: rgb(16,23,40);
+  background: linear-gradient(0deg, rgba(16,23,40,1) 0%, rgba(63,11,66,1) 71%, rgba(55,29,95,1) 100%);
+}
+</style>

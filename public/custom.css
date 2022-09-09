@@ -1,0 +1,21 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.kapic-text-gradient {
+  background: #2138CF;
+  background: linear-gradient(to top, #2138CF 8%, #FF3BF9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.kapic-bg-gradient {
+  background: #2138CF;
+  background: linear-gradient(to top right, #2138CF 8%, #FF3BF9 100%);
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.hover\:kapic-bg-shadow:hover {
+  box-shadow:  8px 8px 16px #c5c5c5,
+             -8px -8px 16px #fbfbfb;
+}

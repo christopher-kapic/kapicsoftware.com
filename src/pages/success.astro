@@ -1,0 +1,59 @@
+---
+import Layout from "@layouts/Layout.astro";
+---
+
+<Layout title="Welcome to Kapic Software.">
+  <section
+    class="relative bg-white overflow-hidden"
+    style="background-image: url('https://shuffle.dev/flex-ui-assets/elements/pattern-white.svg'); background-position: center;"
+  >
+    <div class="bg-transparent">
+      <div
+        class="navbar-menu hidden fixed top-0 left-0 z-50 w-full h-full bg-gray-900 bg-opacity-50"
+      >
+      </div>
+    </div>
+    <div
+      class="py-20 md:py-28"
+      style="background-image: url( '/hero/background-image.svg' );"
+    >
+      <div class="container px-4 mx-auto">
+        <div class="flex flex-wrap xl:items-center -mx-4">
+          <div
+            class="w-full md:w-1/2 p-4 mb-16 md:mb-0 bg-slate-200 rounded-xl backdrop-blur-sm bg-opacity-90"
+          >
+            <span
+              class="inline-block py-px px-2 mb-4 text-xs leading-5 text-white kapic-bg-gradient uppercase rounded-9xl"
+              >Kapic Software</span
+            >
+            <h1
+              class="mb-6 text-3xl md:text-5xl lg:text-6xl leading-tight font-bold tracking-tight"
+            >
+              <!-- We rapidly build<br/> <span class="text-7xl hidden lg:inline">🚀</span> <span class="kapic-text-gradient text-7xl">fast sites</span> <span class="text-7xl hidden lg:inline">🚀</span> -->
+              We got your request.<br />
+              <span
+                class="kapic-text-gradient text-7xl"
+              >Thank you</span
+              ><span class="text-7xl">.</span>
+            </h1>
+            <p class="mb-8 text-lg md:text-xl text-gray-500 font-medium">
+              We will reach out shortly to schedule a call. You will have a site up and running in no time!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .form-background {
+    background: rgb(32, 41, 58);
+    background: linear-gradient(
+      0deg,
+      rgba(32, 41, 58, 1) 0%,
+      rgba(50, 19, 61, 0.9514399509803921) 28%,
+      rgba(14, 18, 25, 1) 100%
+    );
+  }
+</style>

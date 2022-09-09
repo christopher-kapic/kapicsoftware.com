@@ -1,23 +1,43 @@
 ---
 import Footer from "@components/layout/Footer.astro";
 import Navbar from "@components/layout/Navbar.svelte";
+import { SEO } from "astro-seo";
 import { config } from "src/config";
 
 export interface Props {
   title: string;
+  description?: string | undefined;
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <SEO 
+      title={title}
+      description={description || title}
+      openGraph={{
+        image: {
+          alt: "Kapic Software | Schedule your FREE consultation today!"
+        },
+        basic: {
+          title: config.openGraph.title || title,
+          image: config.openGraph.image,
+          type: "website"
+        },
+        optional: {
+          description: config.openGraph.description
+        }
+      }}
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="custom.css"/>
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <script defer data-domain="kapicsoftware.com" src="https://plausible.kapic.io/js/plausible.js"></script>
   </head>
   <body>
     <Navbar

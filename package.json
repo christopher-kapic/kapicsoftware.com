@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "astro": "^1.1.5",
+    "astro-seo": "^0.6.0",
     "daisyui": "^2.24.2"
   },
   "devDependencies": {
