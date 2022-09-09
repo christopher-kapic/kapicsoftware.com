@@ -5,13 +5,14 @@ import svelte from "@astrojs/svelte";
 import sitemap from "@astrojs/sitemap";
 import prefetch from "@astrojs/prefetch";
 import { config } from "./src/config";
+// https://astro.build/config
 
-// import netlify from "@astrojs/netlify/functions";
+import netlify from "@astrojs/netlify/functions";
 
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), partytown(), svelte(), sitemap(), prefetch()],
   site: config.site,
-  // output: "server",
-  // adapter: netlify()
+  output: "server",
+  adapter: netlify()
 });
