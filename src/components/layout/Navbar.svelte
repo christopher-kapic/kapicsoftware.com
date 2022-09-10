@@ -15,7 +15,7 @@
 <section class="bg-white">
   <nav class="flex justify-between p-6 px-4 desktop-navbar">
     <a href={logoHref} class="flex items-center" rel="prefetch">
-      <img class="h-8 mr-2" src={logo} alt={`${title} logo`} />
+      <img class="h-8 mr-2" width={32} height={32} src={logo} alt={`${title} logo`} />
       <span
         class="text-gray-200 font-extrabold text-2xl hover:text-gray-300 transition hover:underline decoration-primary"
         >{title}</span
