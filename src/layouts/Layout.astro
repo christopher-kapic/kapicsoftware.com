@@ -15,29 +15,81 @@ const { title, description } = Astro.props;
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <SEO 
+    <SEO
       title={title}
       description={description || title}
       openGraph={{
         image: {
-          alt: "Kapic Software | Schedule your FREE consultation today!"
+          alt: "Kapic Software | Schedule your FREE consultation today!",
         },
         basic: {
           title: config.openGraph.title || title,
           image: config.openGraph.image,
-          type: "website"
+          type: "website",
         },
         optional: {
-          description: config.openGraph.description
-        }
+          description: config.openGraph.description,
+        },
       }}
     />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="stylesheet" href="custom.css"/>
+    <link rel="stylesheet" href="custom.css" />
     <meta name="generator" content={Astro.generator} />
-    <script defer data-domain="kapicsoftware.com" src="https://plausible.kapic.io/js/plausible.js"></script>
+    <script
+      defer
+      data-domain="kapicsoftware.com"
+      src="https://plausible.kapic.io/js/plausible.js"
+    ></script>
+    <!-- OpenReplay Tracking Code for kapic software -->
+    <script>
+      var initOpts = {
+        projectKey: "enr5LxXh6a7Fb8p0LmmK",
+        defaultInputMode: 0,
+        obscureTextNumbers: false,
+        obscureTextEmails: true,
+      };
+      var startOpts = { userID: "" };
+      (function (A, s, a, y, e, r) {
+        r = window.OpenReplay = [e, r, y, [s - 1, e]];
+        s = document.createElement("script");
+        s.src = A;
+        s.async = !a;
+        document.getElementsByTagName("head")[0].appendChild(s);
+        r.start = function (v) {
+          r.push([0]);
+        };
+        r.stop = function (v) {
+          r.push([1]);
+        };
+        r.setUserID = function (id) {
+          r.push([2, id]);
+        };
+        r.setUserAnonymousID = function (id) {
+          r.push([3, id]);
+        };
+        r.setMetadata = function (k, v) {
+          r.push([4, k, v]);
+        };
+        r.event = function (k, p, i) {
+          r.push([5, k, p, i]);
+        };
+        r.issue = function (k, p) {
+          r.push([6, k, p]);
+        };
+        r.isActive = function () {
+          return false;
+        };
+        r.getSessionToken = function () {};
+      })(
+        "//static.openreplay.com/latest/openreplay.js",
+        1,
+        0,
+        initOpts,
+        startOpts
+      );
+    </script>
   </head>
   <body>
     <Navbar
@@ -52,7 +104,7 @@ const { title, description } = Astro.props;
       logo="/favicon.svg"
       logoHref="/"
       title="Kapic Software"
-			socials={config.contact.socials}
+      socials={config.contact.socials}
       pages={config.footerLinks}
     />
   </body>
