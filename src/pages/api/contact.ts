@@ -12,7 +12,7 @@ export async function post({request}: {request: Request}) {
   await fetch(import.meta.env.SLACK_NOTIFICATION_URL, {
     method: "POST",
     body: JSON.stringify({
-      text: `${body.email} just requested a consultation for a website.\n${body.message}`
+      text: `${body.email} just requested a consultation for a website.\n${body.message.replace("+", " ")}`
     })
   })
   return Response.redirect(`${url}success`, 307)
